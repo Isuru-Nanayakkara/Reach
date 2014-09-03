@@ -1,7 +1,7 @@
 Swift-Reachability
 ==================
 
-A simple class to check for internet connection availability in Swift.
+A simple class to check for internet connection availability in Swift. Works for both 3G and WiFi connections.
 
 ======================================================================================
 ### Usage
