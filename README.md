@@ -4,8 +4,8 @@ Swift-Reachability
 A simple class to check for internet connection availability in Swift. Works for both 3G and WiFi connections.
 
 
-Usage
-=========
+<h3>Usage</h3>
+==============
 
 * Add the Reachability.swift file to your project.
 * Add the SystemConfiguration framework.
