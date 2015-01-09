@@ -4,10 +4,18 @@ Swift-Reachability
 A simple class to check for internet connection availability in Swift. Works for both 3G and WiFi connections.
 
 
-## Usage
+## Install
 
-* Add the Reachability.swift file to your project.
-* Add the SystemConfiguration framework.
+##### [CocoaPods](http://cocoapods.org/) (< v0.36)
+- Create a `Podfile`.
+- Add the line, `pod 'Swift-Reachability', :git => 'https://github.com/Isuru-Nanayakkara/Swift-Reachability.git'`.
+- Run `pod install`.
+- Add `import Swift_Reachability` to the files where you want to use the library. 
+
+
+##### Manually
+- Add the *Reachability.swift* file to your project.
+- Add the *SystemConfiguration* framework.
 
 
 ## Credits
