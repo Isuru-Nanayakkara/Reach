@@ -13,6 +13,8 @@
 		D369645C1A66EB2300B7E08D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D369645B1A66EB2300B7E08D /* Images.xcassets */; };
 		D369645F1A66EB2300B7E08D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D369645D1A66EB2300B7E08D /* LaunchScreen.xib */; };
 		D369646B1A66EB2300B7E08D /* IJReachabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D369646A1A66EB2300B7E08D /* IJReachabilityTests.swift */; };
+		D36964761A66EC8200B7E08D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36964751A66EC8200B7E08D /* SystemConfiguration.framework */; };
+		D36964781A66ECD400B7E08D /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36964771A66ECD400B7E08D /* IJReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D36964641A66EB2300B7E08D /* IJReachabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IJReachabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36964691A66EB2300B7E08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D369646A1A66EB2300B7E08D /* IJReachabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJReachabilityTests.swift; sourceTree = "<group>"; };
+		D36964751A66EC8200B7E08D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D36964771A66ECD400B7E08D /* IJReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36964761A66EC8200B7E08D /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				D36964511A66EB2300B7E08D /* IJReachability */,
+				D36964741A66EC6E00B7E08D /* Frameworks */,
 				D36964521A66EB2300B7E08D /* Supporting Files */,
 				D36964671A66EB2300B7E08D /* IJReachabilityTests */,
 				D36964501A66EB2300B7E08D /* Products */,
@@ -81,6 +87,7 @@
 				D36964541A66EB2300B7E08D /* AppDelegate.swift */,
 				D36964561A66EB2300B7E08D /* ViewController.swift */,
 				D36964581A66EB2300B7E08D /* Main.storyboard */,
+				D36964771A66ECD400B7E08D /* IJReachability.swift */,
 			);
 			path = IJReachability;
 			sourceTree = "<group>";
@@ -111,6 +118,14 @@
 				D36964691A66EB2300B7E08D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D36964741A66EC6E00B7E08D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D36964751A66EC8200B7E08D /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36964781A66ECD400B7E08D /* IJReachability.swift in Sources */,
 				D36964571A66EB2300B7E08D /* ViewController.swift in Sources */,
 				D36964551A66EB2300B7E08D /* AppDelegate.swift in Sources */,
 			);
@@ -408,6 +424,7 @@
 				D36964701A66EB2300B7E08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D36964711A66EB2300B7E08D /* Build configuration list for PBXNativeTarget "IJReachabilityTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +433,7 @@
 				D36964731A66EB2300B7E08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
