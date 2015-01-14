@@ -1,15 +1,15 @@
 //
-//  Swift_ReachabilityTests.swift
-//  Swift-ReachabilityTests
+//  IJReachabilityTests.swift
+//  IJReachabilityTests
 //
-//  Created by Isuru Nanayakkara on 9/2/14.
-//  Copyright (c) 2014 Isuru Nanayakkara. All rights reserved.
+//  Created by Isuru Nanayakkara on 1/14/15.
+//  Copyright (c) 2015 Appex. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class Swift_ReachabilityTests: XCTestCase {
+class IJReachabilityTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
