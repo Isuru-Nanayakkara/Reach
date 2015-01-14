@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.license = 'MIT'
   spec.author = { 'Isuru Nanayakkara' => 'isuru.nan@gmail.com' }
   spec.source = { :git => 'https://github.com/Isuru-Nanayakkara/IJReachability.git', :tag => "#{spec.version}" }
-  spec.source_files = 'IJReachability/IJReachability.swift'
+  spec.source_files = 'IJReachability/IJReachability/IJReachability.swift'
   spec.requires_arc = true
   spec.frameworks = 'SystemConfiguration'
 end
