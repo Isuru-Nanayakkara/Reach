@@ -9,7 +9,7 @@
 import Foundation
 import SystemConfiguration
 
-enum IJReachabilityType {
+public enum IJReachabilityType {
     case WWAN,
     WiFi,
     NotConnected
@@ -20,7 +20,7 @@ public class IJReachability {
     /**
     :see: Original post - http://www.chrisdanielson.com/2009/07/22/iphone-network-connectivity-test-example/
     */
-    class func isConnectedToNetwork() -> Bool {
+    public class func isConnectedToNetwork() -> Bool {
         
         var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
@@ -41,7 +41,7 @@ public class IJReachability {
         return (isReachable && !needsConnection) ? true : false
     }
     
-    class func isConnectedToNetworkOfType() -> IJReachabilityType {
+    public class func isConnectedToNetworkOfType() -> IJReachabilityType {
         
         var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
