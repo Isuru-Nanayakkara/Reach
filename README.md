@@ -8,7 +8,7 @@ A simple class to check for internet connection availability in Swift. Works for
 
 ##### [CocoaPods](http://cocoapods.org/) (< v0.36)
 
-IMPORTANT: CocoaPods support is currently down. Working on getting it back up. Sorry.
+**IMPORTANT: CocoaPods support is currently down. Working on getting it back up. Sorry.**
 
 - Create a `Podfile`.
 - Add the line, `pod 'IJReachability', :git => 'https://github.com/Isuru-Nanayakkara/IJReachability.git'`.
