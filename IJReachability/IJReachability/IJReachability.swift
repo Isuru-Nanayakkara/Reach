@@ -23,7 +23,7 @@ public class IJReachability {
     public class func isConnectedToNetwork() -> Bool {
         
         var Status:Bool = false
-        let url = NSURL(string: "http://google.com/")
+        let url = NSURL(string: "https://google.com/")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "HEAD"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
