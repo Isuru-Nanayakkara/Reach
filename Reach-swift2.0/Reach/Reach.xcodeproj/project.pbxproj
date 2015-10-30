@@ -391,6 +391,7 @@
 				D3F2909F1BE3B037003DE290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3F290A01BE3B037003DE290 /* Build configuration list for PBXNativeTarget "ReachTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +400,7 @@
 				D3F290A21BE3B037003DE290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
