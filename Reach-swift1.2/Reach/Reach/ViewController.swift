@@ -26,18 +26,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     @IBAction func checkButtonTapped(sender: UIButton) {
-        let status = Reach().connectionStatus()
+        let status = Reach.connectionStatus()
         switch status {
         case .Unknown, .Offline:
-            print("Not connected")
+            println("Not connected")
         case .Online(.WWAN):
-            print("Connected via WWAN")
+            println("Connected via WWAN")
         case .Online(.WiFi):
-            print("Connected via WiFi")
+            println("Connected via WiFi")
         }
     }
     
