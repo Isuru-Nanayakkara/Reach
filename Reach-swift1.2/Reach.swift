@@ -25,11 +25,11 @@ import Foundation
 import SystemConfiguration
 
 
-enum ReachabilityType: Printable {
+public enum ReachabilityType: Printable {
     case WWAN
     case WiFi
     
-    var description: String {
+    public var description: String {
         switch self {
         case .WWAN: return "WWAN"
         case .WiFi: return "WiFi"
@@ -37,12 +37,12 @@ enum ReachabilityType: Printable {
     }
 }
 
-enum ReachabilityStatus: Printable  {
+public enum ReachabilityStatus: Printable  {
     case Offline
     case Online(ReachabilityType)
     case Unknown
     
-    var description: String {
+    public var description: String {
         switch self {
         case .Offline: return "Offline"
         case .Online(let type): return "Online (\(type))"
@@ -57,7 +57,7 @@ enum ReachabilityStatus: Printable  {
 */
 public class Reach {
     
-    class func connectionStatus() -> ReachabilityStatus {
+    public class func connectionStatus() -> ReachabilityStatus {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
