@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.networkStatusChanged(_:)), name: ReachabilityStatusChangedNotification, object: nil)
         Reach().monitorReachabilityChanges()
     }
     
