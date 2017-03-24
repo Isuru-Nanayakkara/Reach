@@ -16,6 +16,35 @@ A simple class to check for internet connection availability in Swift. Works for
 ##### Manually
 - 
 
+## Checking internet connection
+``` swift
+let status = Reach().connectionStatus()
+        switch status {
+        case .Unknown, .Offline:
+            print("Not connected")
+        case .Online(.WWAN):
+            print("Connected via WWAN")
+        case .Online(.WiFi):
+            print("Connected via WiFi")
+        }
+```
+
+## Delegate Method
+``` swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
+        Reach().monitorReachabilityChanges()
+    }
+    
+    func networkStatusChanged(notification: NSNotification) {
+        let userInfo = notification.userInfo
+        print(userInfo)
+    }
+```
+
+
 
 ## Credits
 
