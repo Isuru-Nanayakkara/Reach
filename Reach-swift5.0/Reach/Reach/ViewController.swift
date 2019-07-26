@@ -27,13 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.networkStatusChanged(_:)), name: Notification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
     }
     
     @objc func networkStatusChanged(_ notification: Notification) {
-        if let userInfo = (notification as NSNotification).userInfo {
-            print(userInfo)
+        if let userInfo = notification.userInfo {
+            let status = userInfo["Status"] as! String
+            print(status)
         }
         
     }
