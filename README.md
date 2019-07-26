@@ -1,6 +1,3 @@
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
-
-
 Reach
 ==================
 
@@ -9,13 +6,51 @@ A simple class to check for internet connection availability in Swift. Works for
 
 ## Install
 
-##### [CocoaPods](http://cocoapods.org/) (< v0.36)
-- 
-
-
 ##### Manually
-- 
+- Add the _Reach.swift_ file to your project.
 
+
+## Usage
+There are two ways to get network status information from Reach.
+
+1. Call `Reach().connectionStatus()`. The network status is returned in an enum called `ReachabilityStatus`.
+
+```swift
+let status = Reach().connectionStatus()
+
+switch status {
+case .unknown, .offline:
+    print("Not connected")
+case .online(.wwan):
+    print("Connected via WWAN")
+case .online(.wiFi):
+    print("Connected via WiFi")
+}
+```
+
+2. By subscribing to `ReachabilityStatusChangedNotification`s. The network status is returned as a string.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.networkStatusChanged(_:)), name: Notification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+    
+    Reach().monitorReachabilityChanges()
+}
+
+@objc func networkStatusChanged(_ notification: Notification) {
+    if let userInfo = notification.userInfo {
+        let status = userInfo["Status"] as! String
+        print(status)
+    }
+    
+}
+```
+
+
+## ToDo
+- [ ] Return storngly typed object containing more information about the network status.
 
 ## Credits
 
