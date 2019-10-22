@@ -39,7 +39,7 @@ enum ReachabilityType: CustomStringConvertible {
     }
 }
 
-enum ReachabilityStatus: CustomStringConvertible  {
+enum ReachabilityStatus: CustomStringConvertible, Equatable  {
     case offline
     case online(ReachabilityType)
     case unknown
@@ -50,6 +50,11 @@ enum ReachabilityStatus: CustomStringConvertible  {
         case .online(let type): return "Online (\(type))"
         case .unknown: return "Unknown"
         }
+    }
+
+    static func ==(lhs: ReachabilityStatus, rhs: ReachabilityStatus) -> Bool
+    {
+        return lhs.description == rhs.description
     }
 }
 
