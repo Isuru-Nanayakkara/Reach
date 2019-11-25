@@ -51,6 +51,16 @@ enum ReachabilityStatus: CustomStringConvertible  {
         case .unknown: return "Unknown"
         }
     }
+
+    func isOnline() -> Bool {
+        switch self {
+            case .online(.wwan), .online(.wiFi):
+                return true;
+
+            default:
+                return false;
+        }
+    }
 }
 
 public class Reach {
